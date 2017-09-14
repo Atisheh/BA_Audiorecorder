@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block page_title %} New Record {% endblock %}
+
+{% block content %}
+		<form method = 'POST' action= '/record/' >
+
+			{{form.as_p}}
+			{% csrf_token %}
+			<input type= 'submit' value= 'submit '/>
+
+		</form>
+{% endblock %}
